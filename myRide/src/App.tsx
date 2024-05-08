@@ -1,10 +1,8 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
 
 function App() {
-
-  return (
-      <h1>Desafio XII</h1>
-  )
+  return (<Outlet />)
 }
 
 export default App
