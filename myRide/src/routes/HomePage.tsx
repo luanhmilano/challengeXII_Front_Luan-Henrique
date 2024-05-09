@@ -1,10 +1,12 @@
 import Header from "../components/Header"
+import Section1 from "../components/Section1"
 
 const HomePage = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Section1 />
+    </>
   )
 }
 
