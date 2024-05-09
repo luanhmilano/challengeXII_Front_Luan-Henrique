@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_menu {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
