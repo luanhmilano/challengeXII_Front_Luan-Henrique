@@ -1,5 +1,5 @@
 import Header from "../components/Header"
-import Section1 from "../components/Section1"
+import Section1 from "../components/section1/Section1"
 
 const HomePage = () => {
   return (
