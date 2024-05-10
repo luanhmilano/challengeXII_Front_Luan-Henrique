@@ -58,6 +58,7 @@ section {
 }
 
 fieldset {
+    display: flex;
     border-radius: 5px;
 }
 
@@ -79,6 +80,10 @@ input:focus, textarea:focus, select:focus{
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     width: 40%;
     padding: 20px;
     background-color: #FBA403;

@@ -1,4 +1,5 @@
 import heroImg from "../assets/section-1/car-image.png"
+import { MagnifyingGlass, X } from '@phosphor-icons/react'
 import './styles/section1.css'
 
 const Section1 = () => {
@@ -18,13 +19,18 @@ const Section1 = () => {
                     <fieldset>
                         <legend>Your Pickup</legend>
                         <input type="text" className="form-input" id="location-input" name="location" value="Current Location" readOnly />
+                        <X size={20} color="white" />
                     </fieldset>
                     <fieldset>
                         <legend>Your Destination</legend>
                         <input type="text" className="form-input" id="destination-input" name="destination" />
+                        <X size={20} color="white" />
                     </fieldset>
                 </div>
-                <button type="submit">FIND A DRIVER</button>
+                <button type="submit">
+                    <MagnifyingGlass size={20} weight="bold" />
+                    FIND A DRIVER
+                </button>
             </form>
         </div>
     </section>
