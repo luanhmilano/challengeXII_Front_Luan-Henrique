@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useNavigate  } from 'react-router-dom';
 import { MagnifyingGlass, X } from '@phosphor-icons/react'
 import './location-form.css'
 
@@ -14,7 +15,7 @@ interface IPInfo {
 
 const LocationForm: React.FC = () => {
 
-    {/* Consumo da API de localização, salvando os dados em localstorage */}
+    // Consumo da API de localização, salvando os dados em localstorage
 
     const [ipInfo, setIpInfo] = useState<IPInfo | null>(null)
 
@@ -40,7 +41,7 @@ const LocationForm: React.FC = () => {
 
     const pickup = `${ipInfo?.location.city}, ${ipInfo?.location.region}, ${ipInfo?.location.country}`
 
-    {/* Mudança de cor no campo "Your Destination" usando useState */}
+    // Mudança de cor no campo "Your Destination" usando useState
 
     const [isFocused, setIsFocused] = useState(false)
 
@@ -52,8 +53,16 @@ const LocationForm: React.FC = () => {
         setIsFocused(false)
     }
 
+    // Submit e redirecionamento para a página 404
+
+    const navigate = useNavigate()
+
+    const handleSubmit = () => {
+        return navigate("/404")
+    }
+
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
         <h2 className="form-title">Find a ride now</h2>
         <div className="fields">
             <fieldset>
