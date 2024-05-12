@@ -1,0 +1,21 @@
+.section2-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.section2-subtitle {
+    font-size: 26px;
+    color: #FBA403;
+    margin: 0;
+}
+
+.section2-main-title {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+}

@@ -1,6 +1,6 @@
-import logo from "../assets/Logo.png"
+import logo from "../assets/header/Logo.png"
 import { Bell } from "@phosphor-icons/react"
-import icon2 from "../assets/user-avatar.png"
+import icon2 from "../assets/header/user-avatar.png"
 import './styles/header.css'
 
 const Header = () => {
