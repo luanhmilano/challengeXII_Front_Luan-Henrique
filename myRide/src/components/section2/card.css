@@ -1,0 +1,34 @@
+.card-container {
+    background-color: #383838;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 307px;
+    border-radius: 5px;
+}
+
+.card-container a {
+    color: #FBA403;
+    font-size: 14px;
+}
+
+.card-text {
+    padding: 5px 15px;
+}
+
+.card-title {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #B3B3B3;
+    margin-top: 5px;
+}
+
+.learn-more {
+    padding: 0px 25px 25px 25px;
+    text-align: end;
+}
