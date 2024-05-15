@@ -1,3 +1,5 @@
+import './checkbox.css'
+
 const CheckboxButton = () => {
   return (
     <label className="switch">

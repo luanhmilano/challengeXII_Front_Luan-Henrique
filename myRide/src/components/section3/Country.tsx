@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 
-interface paises {
+interface Paises {
     nome: {
         abreviado: string
     }
@@ -17,11 +17,11 @@ const Country = () => {
                 const response = await axios.get("https://servicodados.ibge.gov.br/api/v1/paises/{paises}");
 
                 const countries = new Set<string>()
-                response.data.map((item: paises) => {
+                response.data.map((item: Paises) => {
                     countries.add(item.nome.abreviado)
                 })
 
-                const sortCountries = Array.from(countries).sort()
+                const sortCountries = Array.from(countries).sort((a, b) => a.localeCompare(b))
 
                 setCountries(sortCountries)
 

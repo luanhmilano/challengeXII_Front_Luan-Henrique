@@ -6,7 +6,6 @@ export const driverSchema = z.object({
     email: z.string().min(1, "Invalid email").email("Invalid email"),
     city: z.string().min(1, "Invalid city"),
     referralCode: z.string().min(1, "Invalid code"),
-    carType: z.string({ invalid_type_error: "Select a vehicle type." })
 })
 
 export type DriverSchema = z.infer<typeof driverSchema>
