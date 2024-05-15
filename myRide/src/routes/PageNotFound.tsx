@@ -1,8 +1,12 @@
-import React from 'react'
+import { WarningCircle } from "@phosphor-icons/react/dist/ssr"
+import '../components/styles/page404.css'
 
 const PageNotFound = () => {
   return (
-    <div>PageNotFound</div>
+    <div className="warning">
+      <WarningCircle size={600} color="#FBA403" />
+      <h1>Página não encontrada</h1>
+    </div>
   )
 }
 
