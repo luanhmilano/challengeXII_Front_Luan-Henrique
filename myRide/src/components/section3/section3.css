@@ -1,13 +1,29 @@
 .section3-container {
     background-color: #282828;
+    width: 57%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section3-form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .section3-title {
     font-size: 27px;
     color: #FBA403;
+    margin: 0;
 }
 
 .section3-subtitle {
     font-size: 16px;
-    color: #fff
+    color: #fff;
 }
