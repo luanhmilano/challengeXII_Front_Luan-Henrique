@@ -1,12 +1,10 @@
-import logo from "../assets/header/Logo.png"
 import { Bell } from "@phosphor-icons/react"
-import icon2 from "../assets/header/user-avatar.png"
 import './styles/header.css'
 
 const Header = () => {
   return (
     <header>
-        <div><img src={logo} alt="Logo"/></div>
+        <div><img src="https://imagens-desafio.s3.amazonaws.com/header/Logo.png" alt="Logo"/></div>
         <ul className='header_menu'>
             <li><a href="https://compass.uol/pt/home/" target="_blank">Home</a></li>
             <li><a href="https://compass.uol/pt/home/" target="_blank">Getting a Taxi</a></li>
@@ -15,7 +13,7 @@ const Header = () => {
         </ul>
         <div className='header-icons'>
             <Bell size={32} color="white" />
-            <span id="image-span"><img src={icon2} alt="User"/></span>
+            <span id="image-span"><img src="https://imagens-desafio.s3.amazonaws.com/header/user-avatar.png" alt="User"/></span>
         </div>
     </header>
   )

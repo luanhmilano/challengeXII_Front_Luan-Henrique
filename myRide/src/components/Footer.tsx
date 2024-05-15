@@ -1,20 +1,16 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/footer/logo-footer.png'
-import facebook from '../assets/footer/facebook.png'
-import instagram from '../assets/footer/instagram.png'
-import twitter from '../assets/footer/twitter.png'
 import './styles/footer.css'
 
 const Footer = () => {
   return (
     <footer>
         <div className="footer-left">
-            <img src={logo} alt="Logotipo Footer" />
+            <img src="https://imagens-desafio.s3.amazonaws.com/footer/logo-footer.png" alt="Logotipo Footer" />
             <p>MyRide Inc., 2nd Floor, New York, NY 10016</p>
             <div className='footer-socials'>
-                <a href="https://www.facebook.com/compass.uol" target='_blank'><img src={facebook} alt="Facebook logo" /></a>
-                <a href="https://www.instagram.com/compass.uol/" target='_blank'><img src={instagram} alt="Instagram logo" /></a>
-                <a href="https://www.twitter.com/compassuol" target='_blank'><img src={twitter} alt="Twitter logo" /></a>
+                <a href="https://www.facebook.com/compass.uol" target='_blank'><img src="https://imagens-desafio.s3.amazonaws.com/footer/facebook.png" alt="Facebook logo" /></a>
+                <a href="https://www.instagram.com/compass.uol/" target='_blank'><img src="https://imagens-desafio.s3.amazonaws.com/footer/instagram.png" alt="Instagram logo" /></a>
+                <a href="https://www.twitter.com/compassuol" target='_blank'><img src="https://imagens-desafio.s3.amazonaws.com/footer/twitter.png" alt="Twitter logo" /></a>
             </div>
         </div>
         <div className='footer-menu'>
