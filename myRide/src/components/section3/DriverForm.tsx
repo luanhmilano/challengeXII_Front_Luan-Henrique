@@ -1,15 +1,47 @@
+import { useState, useEffect } from "react"
+import axios from 'axios';
 import { WarningCircle } from "@phosphor-icons/react/dist/ssr"
 import { useForms } from '../../hooks/useForms'
 import { DriverSchema } from '../../schema/driverSchema'
-import CarTypeRadio from './CarTypeRadio'
 import CheckboxButton from './CheckboxButton'
-import Country from './Country'
 
 import './driverform.css'
+import './cartype.css'
 
-const DriverForm = () => {
+interface Country {
+    country: string;
+}
 
+const DriverForm: React.FC = () => {
+
+    const [countries, setCountries] = useState<Country[]>([]);
+    const [selectedCountry, setSelectedCountry] = useState<string>('');
+
+    useEffect(() => {
+        const fetchCountries = async () => {
+          try {
+            const response = await axios.get('https://countriesnow.space/api/v0.1/countries');
+            if (response.data && Array.isArray(response.data.data)) {
+              setCountries(response.data.data);
+            } else {
+              setCountries([]);
+            }
+          } catch (error) {
+            console.error('There was an error fetching the countries!', error);
+            setCountries([]);
+          }
+        };
+    
+        fetchCountries();
+      }, []);
+    
+
+    const handleCountryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCountry(event.target.value);
+    };
+  
     const {register, handleSubmit, errors} = useForms()
+    const newRegister = register('country')
 
     // Envia para o backend
     const onSubmit = (data: DriverSchema) => {
@@ -38,13 +70,30 @@ const DriverForm = () => {
             </fieldset>
             {errors.email && <small className='invalid-message'><WarningCircle weight="fill" />{errors.email.message}</small>}
         </span>
-        <Country />
+        
+        <span>
+              <fieldset>
+                <legend>Country</legend>
+                  <select value={selectedCountry} {...newRegister} onChange={handleCountryChange} >
+                    <option value="" disabled>Country</option>
+                    {countries.map(country => (
+                      <option key={country.country} value={country.country}>
+                        {country.country}
+                      </option>
+                    ))}
+                  </select>
+              </fieldset>
+              {errors.country && <small className='invalid-message'><WarningCircle weight="fill" />{errors.country.message}</small>}
+        </span>
+
         <span>
             <fieldset>
-                <input type="text" id='city' className='section3-input' {...register('city')} placeholder='City' />
+                <input type="text" id='city' className='section3-input' {...register("city")} placeholder='City' />
             </fieldset>
             {errors.city && <small className='invalid-message'><WarningCircle weight="fill" />{errors.city.message}</small>}
         </span>
+    
+            
         <span>
             <fieldset>
                 <input type="text" id='referral-code' className='section3-input' {...register('referralCode')} placeholder='Referral Code' />
@@ -56,7 +105,44 @@ const DriverForm = () => {
             <CheckboxButton />
         </div>
         <h2 id='cartype-title'>Select your car type</h2>
-        <CarTypeRadio />
+
+        <div className="custom-radio">
+            <label>
+                <div className="cartype-card">
+                    <input type="radio" id='sedan' value="sedan" {...register('carType')} />
+                    <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-1.png" alt="Option 1"/>
+                    <p>Sedan</p>
+                </div>
+            </label>
+
+            <label>
+                <div className="cartype-card">
+                    <input type="radio" id='suv-van' value="suv-van" {...register('carType')} /> 
+                    <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-2.png" alt="Option 2"/>
+                    <p>SUV/Van</p>
+                </div>
+            
+            </label>
+
+            <label>
+                <div className="cartype-card">
+                    <input type="radio" id='semi-luxury' value="semi-luxury" {...register('carType')} />
+                    <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-3.png" alt="Option 3"/>
+                    <p>Semi Luxury</p>
+                </div>
+            </label>
+
+            <label>
+                <div className="cartype-card">
+                    <input type="radio" id='luxury-car' value="luxury-car" {...register('carType')} />
+                    <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-4.png" alt="Option 4"/>
+                    <p>Luxury Car</p>
+                </div>
+            </label>
+
+        </div>
+        {errors.carType && <small className='invalid-message'><WarningCircle weight="fill" />{errors.carType.message}</small>}
+
         <button type='submit'>SUBMIT</button>
     </form>
   )
