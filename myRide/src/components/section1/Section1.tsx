@@ -1,4 +1,4 @@
-import './section1.css'
+import './styles/section1.css'
 import LocationForm from "./LocationForm"
 
 

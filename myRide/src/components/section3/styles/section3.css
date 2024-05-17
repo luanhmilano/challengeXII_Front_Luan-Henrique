@@ -27,3 +27,20 @@
     font-size: 16px;
     color: #fff;
 }
+
+.sucess {
+    background-color: #282828;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+}
+
+.sucess h1 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+}

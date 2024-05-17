@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import './card.css'
+import './styles/card.css'
 
 interface Car {
   title: string

@@ -1,4 +1,4 @@
-import './checkbox.css'
+import './styles/checkbox.css'
 
 const CheckboxButton = () => {
   return (

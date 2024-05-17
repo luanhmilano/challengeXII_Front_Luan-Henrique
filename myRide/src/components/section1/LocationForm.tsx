@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate  } from 'react-router-dom';
 import { MagnifyingGlass, X } from '@phosphor-icons/react'
-import './location-form.css'
+import './styles/location-form.css'
 
 interface IPInfo {
     ip: string
