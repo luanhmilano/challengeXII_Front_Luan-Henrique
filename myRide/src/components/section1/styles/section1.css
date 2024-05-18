@@ -6,6 +6,22 @@ section {
     padding: 5rem;
 }
 
+@media (max-width: 415px) {
+    .image-container img {
+        width: 400px;
+    }
+
+    .section1-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 25%;
+    }
+
+    .booking-form {
+        width: 380px;
+    }
+}
+
 .booking-form {
     padding: 30px;
 }

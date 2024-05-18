@@ -19,7 +19,7 @@ const Card: React.FC<Props> = ( { idProp } ) => {
   useEffect(() => {
         const fetchCarInfo = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/cars/${idProp}`);
+                const response = await axios.get(`https://solid-halibut-7w9wx455j7wcxr95-3000.app.github.dev/cars/${idProp}`);
                 setCarInfo(response.data);
             } catch (error) {
                 console.error('Erro ao buscar informações no Banco: ', error)

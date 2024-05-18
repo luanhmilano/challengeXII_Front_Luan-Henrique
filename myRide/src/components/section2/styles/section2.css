@@ -2,6 +2,18 @@
     display: flex;
     flex-direction: column;     
     gap: 4rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 415px) {
+    .section2-container {
+        width: 414px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
 }
 
 .section2-text {

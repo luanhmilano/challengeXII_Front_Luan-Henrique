@@ -1,6 +1,18 @@
 header {
     display: flex;
     justify-content: space-between;
+    width: 100vw;
+}
+
+@media (max-width: 415px) {
+    header {
+        width: 60vw;
+        flex-direction: column;
+    }
+
+    .header_menu {
+        flex-direction: column;
+    }
 }
 
 .header_menu {
