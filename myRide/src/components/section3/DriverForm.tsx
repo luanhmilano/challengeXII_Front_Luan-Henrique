@@ -3,7 +3,7 @@ import axios, { AxiosError } from 'axios'
 import { useState, useEffect } from "react"
 import { useForms } from '../../hooks/useForms'
 
-import { WarningCircle } from "@phosphor-icons/react/dist/ssr"
+import { WarningCircle, CaretDown } from "@phosphor-icons/react/dist/ssr"
 
 import { DriverSchema } from '../../schema/driverSchema'
 
@@ -136,7 +136,7 @@ const DriverForm: React.FC = () => {
               <span>
                     <fieldset>
                       <legend>Country</legend>
-                        <select value={selectedCountry} {...newRegister} onChange={handleCountryChange} >
+                        <select id='country-select' value={selectedCountry} {...newRegister} onChange={handleCountryChange} >
                           <option value="" disabled>Country</option>
                           {countries.map(country => (
                               <option key={country.country} value={country.country}>
@@ -144,6 +144,7 @@ const DriverForm: React.FC = () => {
                             </option>
                           ))}
                         </select>
+                        <CaretDown size={32} color='white' />
                     </fieldset>
                     {errors.country && <small className='invalid-message'><WarningCircle weight="fill" />{errors.country.message}</small>}
               </span>

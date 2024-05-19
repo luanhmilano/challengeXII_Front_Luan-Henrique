@@ -53,3 +53,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media (max-width: 415px) {
+    button {
+        padding: 5px;
+        gap: 2px;
+        font-size: 10px;
+        height: 40px;
+    }
+}

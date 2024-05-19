@@ -23,6 +23,12 @@
     gap: 10px;
 }
 
+@media (max-width: 415px) {
+    .custom-radio {
+        gap: 2px
+    }
+}
+
 .cartype-card {
     border: 2px solid #fff;
     border-radius: 5px;
