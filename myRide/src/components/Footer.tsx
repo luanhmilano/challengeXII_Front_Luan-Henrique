@@ -3,7 +3,7 @@ import './styles/footer.css'
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id='footer'>
         <div className="footer-left">
             <img src="https://imagens-desafio.s3.amazonaws.com/footer/logo-footer.png" alt="Logotipo Footer" />
             <p>MyRide Inc., 2nd Floor, New York, NY 10016</p>

@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import { Bell } from "@phosphor-icons/react"
 import './styles/header.css'
 
@@ -6,10 +7,10 @@ const Header = () => {
     <header>
         <div><img src="https://imagens-desafio.s3.amazonaws.com/header/Logo.png" alt="Logo"/></div>
           <ul className='header_menu'>
-              <li><a href="https://compass.uol/pt/home/" target="_blank">Home</a></li>
-              <li><a href="https://compass.uol/pt/home/" target="_blank">Getting a Taxi</a></li>
-              <li><a href="https://compass.uol/pt/home/" target="_blank">Mobile App</a></li>
-              <li><a href="https://compass.uol/pt/home/" target="_blank">Contact Us</a></li>
+              <li><Link to="section1-container" spy={true} smooth={true} offset={-70} duration={600}>Home</Link></li>
+              <li><Link to="cards" spy={true} smooth={true} offset={-70} duration={600}>Getting a Taxi</Link></li>
+              <li><Link to="section3-container" spy={true} smooth={true} offset={-70} duration={600}>Mobile App</Link></li>
+              <li><Link to="footer" spy={true} smooth={true} offset={-70} duration={600}>Contact Us</Link></li>
           </ul>
           <div className='header-icons'>
               <Bell size={32} color="white" />
