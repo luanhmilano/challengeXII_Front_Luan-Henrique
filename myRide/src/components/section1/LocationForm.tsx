@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+
+import React, { useState, useEffect } from 'react'
 import { useNavigate  } from 'react-router-dom';
+
 import { MagnifyingGlass, X } from '@phosphor-icons/react'
-import './location-form.css'
+
+import './styles/location-form.css'
 
 interface IPInfo {
     ip: string
@@ -19,6 +22,7 @@ const LocationForm: React.FC = () => {
 
     const [ipInfo, setIpInfo] = useState<IPInfo | null>(null)
 
+
     useEffect(() => {
         const savedIPInfo = localStorage.getItem('ipInfo')
 
@@ -27,7 +31,8 @@ const LocationForm: React.FC = () => {
         } else {
             const fetchIPInfo = async () => {
                 try {
-                    const response = await axios.get('https://geo.ipify.org/api/v2/country,city?apiKey=at_LZoAcsn5XT4jigA1Jo2qile871aqk');
+                    // APIKEY = at_LZoAcsn5XT4jigA1Jo2qile871aqk
+                    const response = await axios.get(`${import.meta.env.VITE_IP_API}=${import.meta.env.VITE_APIKEY}`);
                     setIpInfo(response.data);
                     localStorage.setItem('ipInfo', JSON.stringify(response.data));
                 } catch (error) {

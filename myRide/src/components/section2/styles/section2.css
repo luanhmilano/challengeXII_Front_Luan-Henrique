@@ -2,6 +2,27 @@
     display: flex;
     flex-direction: column;     
     gap: 4rem;
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 415px) {
+    .section2-container {
+        width: 350px;
+        padding: 1.5rem;
+    }
+
+    .section2-text p {
+        font-size: 16px;
+    }
+
+    .section2-text h1 {
+        font-size: 30px;
+    }
+
+    .cards {
+        justify-content: center;
+    }
 }
 
 .section2-text {

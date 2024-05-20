@@ -38,3 +38,11 @@ footer {
     flex-direction: column;
     gap: 15px;
 }
+
+@media (max-width: 415px) {
+    footer {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 1.5rem;
+    }
+}

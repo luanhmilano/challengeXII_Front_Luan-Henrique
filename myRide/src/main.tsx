@@ -5,8 +5,8 @@ import './index.css'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import HomePage from './routes/HomePage.tsx'
-import PageNotFound from './routes/PageNotFound.tsx'
+import HomePage from './pages/HomePage.tsx'
+import PageNotFound from './pages/PageNotFound.tsx'
 
 const router = createBrowserRouter([
   {

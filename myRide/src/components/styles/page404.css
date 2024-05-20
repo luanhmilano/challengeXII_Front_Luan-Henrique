@@ -1,0 +1,16 @@
+.warning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 415px) {
+    .warning {
+        width: 100%;
+    }
+}
+
+.warning h1 {
+    color: #fff
+}

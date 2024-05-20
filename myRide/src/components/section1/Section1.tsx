@@ -1,11 +1,11 @@
-import './section1.css'
+import './styles/section1.css'
 import LocationForm from "./LocationForm"
 
 
 const Section1 = () => {
 
   return (
-    <section>
+    <section className='section1-container'>
         <div className="image-container">
             <img src="https://imagens-desafio.s3.amazonaws.com/section-1/car-image.png" alt="" />
         </div>

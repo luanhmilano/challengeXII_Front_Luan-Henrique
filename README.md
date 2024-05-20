@@ -1,30 +1,85 @@
-# React + TypeScript + Vite
+# Challenge Semana XII - Compass UOL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Repositório Frontend do 3° Desafio do Programa de Bolsas Fullstack da Compass UOL.
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Landing Page de um sistema de transporte (myRide), possuindo 3 seções bem definidas com cada funcionalidade requisitada.
+Envia e busca dados no Backend. 
+É responsiva nas larguras <strong>1440px</strong> e <strong>414px</strong>.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 1° Seção
 
-- Configure the top-level `parserOptions` property like this:
+<ul>
+  <li>Mostra a localização do usuário com base no IP.</li>
+  <li>Recebe uma localização de destino e redireciona para a página 404.</li>
+</ul>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### 2° Seção
+
+<ul>
+  <li>Busca informações dos carros no database e mostra.</li>
+</ul>
+
+### 3° Seção
+
+<ul>
+  <li>Possui validações para cada campo do formulário, incluindo validação de email existente.</li>
+  <li>A lista de países vem de uma API externa.</li>
+  <li>Os dados são enviados ao database ao validar o Submit.</li>
+  <li>Um loading é adicionado enquanto o formulário está sendo enviado.</li>
+  <li>O envio com sucesso modifica a seção, e troca o formulário por uma seção de sucesso.</li>
+</ul>
+
+## Iniciando
+
+### Configuração do arquivo ".env"
+
+Crie um arquivo .env no projeto substituindo os placeholders adequadamente. Para gerar a APIKEY é necessário se cadastrar em
+<a href="https://geo.ipify.org">Geo IP</a>. O HOST é o endereço de onde a aplicação Backend está rodando.
+
+```bash
+  VITE_IP_API="https://geo.ipify.org/api/v2/country,city?apiKey"
+  VITE_APIKEY="[APIKEY]"
+
+  VITE_HOST="[HOST]"
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Instalação e Execução
+
+<ul>
+  <li>Clone o repositório.</li>
+  <li>Acesse por uma IDE, entre no diretório com o comando: </li>
+
+  ```bash
+    $ cd myRide
+  ```
+
+  <li>Use a CLI para instalar as dependências com o comando: </li>
+
+  ```bash
+    $ npm install
+  ```
+
+  <li>Inicialize o projeto com o comando: </li>
+
+  ```bash
+    $ npm run dev
+  ```
+</ul>
+
+Visualize a aplicação em uma das larguras responsivas (1440px ou 414px) e teste as funcionalidades.
+
+## Tecnologias utilizadas
+
+<ul>
+  <li> <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> - Linguagem utilizada </li>
+  <li> <a href="https://react.dev/" target="_blank">React</a> - Com Router e Form </li>
+  <li> <a href="https://vitejs.dev/" target="_blank">Vite</a> - Ambiente para React </li>
+  <li> <a href="https://www.npmjs.com/" target="_blank">npm</a> - Gerenciador de pacotes </li>
+  <li> <a href="https://github.com/axios/axios" target="_blank">Axios</a> - Requisições HTTP </li>
+  <li> <a href="https://zod.dev/" target="_blank">Zod</a> - Validações client-side </li>
+  <li> <a href="https://phosphoricons.com/" target="_blank">Phosphoricons</a> - Ícones </li>
+</ul>

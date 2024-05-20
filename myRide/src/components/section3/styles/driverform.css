@@ -1,0 +1,68 @@
+.section3-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.invalid-message {
+    color: #E32200;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.section3-names {
+    display: flex;
+    gap: 20px;
+}
+
+.names-field {
+    width: 50%;
+}
+
+.section3-input {
+    padding: 5px;
+}
+
+#country-select {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    appearance: none;
+    width: 100%;
+}
+
+#country-select option {
+    background-color: #757575;
+    color: #fff;
+}
+
+.own-car {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.own-car p {
+    font-size: 16px;
+    color: #fff;
+}
+
+#cartype-title {
+    color: #FBA403;
+    margin: 0;
+    font-size: 20px;
+}
+
+.section3-form button {
+    width: 20%;
+}
+
+.button-load {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}

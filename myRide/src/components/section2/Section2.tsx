@@ -1,5 +1,5 @@
 import Card from './Card'
-import './section2.css'
+import './styles/section2.css'
 
 const Section2: React.FC = () => {
 
