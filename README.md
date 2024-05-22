@@ -37,12 +37,11 @@ Envia e busca dados no Backend.
 
 ### Configuração do arquivo ".env"
 
-Crie um arquivo .env no projeto substituindo os placeholders adequadamente. Para gerar a APIKEY é necessário se cadastrar em
-<a href="https://geo.ipify.org">Geo IP</a>. O HOST é o endereço de onde a aplicação Backend está rodando.
+Crie um arquivo .env no projeto configurando a API e a APIKEY. O HOST é o endereço de onde a aplicação Backend está rodando.
 
 ```bash
   VITE_IP_API="https://geo.ipify.org/api/v2/country,city?apiKey"
-  VITE_APIKEY="[APIKEY]"
+  VITE_APIKEY="at_LZoAcsn5XT4jigA1Jo2qile871aqk"
 
   VITE_HOST="[HOST]"
 ```
