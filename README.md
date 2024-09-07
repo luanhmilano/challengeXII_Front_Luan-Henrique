@@ -41,7 +41,7 @@ Crie um arquivo .env no projeto substituindo os placeholders adequadamente. Para
 <a href="https://geo.ipify.org">Geo IP</a>. O HOST é o endereço de onde a aplicação Backend está rodando.
 
 ```bash
-  VITE_IP_API="https://geo.ipify.org/api/v2/country,city?apiKey"
+  VITE_IP_API="[API]"
   VITE_APIKEY="[APIKEY]"
 
   VITE_HOST="[HOST]"
