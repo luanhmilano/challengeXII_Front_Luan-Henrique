@@ -3,7 +3,7 @@ import './styles/section2.css'
 
 const Section2: React.FC = () => {
 
-  const ids: number[] = [1, 2, 3, 4]
+  const ids: number[] = [0, 1, 2, 3]
 
   return (
     <section className='section2-container'>

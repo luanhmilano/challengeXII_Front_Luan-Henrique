@@ -7,7 +7,7 @@ const Section1 = () => {
   return (
     <section className='section1-container'>
         <div className="image-container">
-            <img src="https://imagens-desafio.s3.amazonaws.com/section-1/car-image.png" alt="" />
+            <img src="../../public/car-image.png" alt="Carro" />
         </div>
         <div className="booking-form">
             <div className="text">

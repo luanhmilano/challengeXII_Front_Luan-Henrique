@@ -103,7 +103,7 @@ const DriverForm: React.FC = () => {
         <section className="section3-container">
 
             <div className='section3-form-header'>
-                <span><img src="https://imagens-desafio.s3.amazonaws.com/section-3/popup-image.png" alt="Logo seção 3" /></span>
+                <span><img src="../../../public/popup-image.png" alt="Logo seção 3" /></span>
                 <div className='section3-text'>
                     <h1 className='section3-title'>Drive with MyRide</h1>
                     <p className='section3-subtitle'>Register as a driver using the form below. Our team will assess and get back to you within 48 hours.</p>
@@ -173,7 +173,7 @@ const DriverForm: React.FC = () => {
                   <label>
                       <div className="cartype-card">
                           <input type="radio" id='sedan' value="sedan" {...register('carType')} />
-                          <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-1.png" alt="Option 1"/>
+                          <img src="../../../public/sedan.png" alt="Option 1"/>
                           <p>Sedan</p>
                       </div>
                   </label>
@@ -181,7 +181,7 @@ const DriverForm: React.FC = () => {
                   <label>
                       <div className="cartype-card">
                           <input type="radio" id='suv-van' value="suvVan" {...register('carType')} /> 
-                          <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-2.png" alt="Option 2"/>
+                          <img src="../../../public/suv.png" alt="Option 2"/>
                           <p>SUV/Van</p>
                       </div>
                   
@@ -190,7 +190,7 @@ const DriverForm: React.FC = () => {
                   <label>
                       <div className="cartype-card">
                           <input type="radio" id='semi-luxury' value="semiLuxury" {...register('carType')} />
-                          <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-3.png" alt="Option 3"/>
+                          <img src="../../../public/semi.png" alt="Option 3"/>
                           <p>Semi Luxury</p>
                       </div>
                   </label>
@@ -198,7 +198,7 @@ const DriverForm: React.FC = () => {
                   <label>
                       <div className="cartype-card">
                           <input type="radio" id='luxury-car' value="luxuryCar" {...register('carType')} />
-                          <img src="https://imagens-desafio.s3.amazonaws.com/section-3/car-icon-4.png" alt="Option 4"/>
+                          <img src="../../../public/luxury.png" alt="Option 4"/>
                           <p>Luxury Car</p>
                       </div>
                   </label>

@@ -5,12 +5,12 @@ const Footer = () => {
   return (
     <footer id='footer'>
         <div className="footer-left">
-            <img src="https://imagens-desafio.s3.amazonaws.com/footer/logo-footer.png" alt="Logotipo Footer" />
+            <img src="../../public/logo-footer.png" alt="Logotipo Footer" />
             <p>MyRide Inc., 2nd Floor, New York, NY 10016</p>
             <div className='footer-socials'>
-                <a href="https://www.facebook.com/compass.uol" target='_blank'><img src="https://imagens-desafio.s3.amazonaws.com/footer/facebook.png" alt="Facebook logo" /></a>
-                <a href="https://www.instagram.com/compass.uol/" target='_blank'><img src="https://imagens-desafio.s3.amazonaws.com/footer/instagram.png" alt="Instagram logo" /></a>
-                <a href="https://www.twitter.com/compassuol" target='_blank'><img src="https://imagens-desafio.s3.amazonaws.com/footer/twitter.png" alt="Twitter logo" /></a>
+                <a href="https://www.facebook.com/compass.uol" target='_blank'><img src="../../public/facebook.png" alt="Facebook logo" /></a>
+                <a href="https://www.instagram.com/compass.uol/" target='_blank'><img src="../../public/instagram.png" alt="Instagram logo" /></a>
+                <a href="https://www.twitter.com/compassuol" target='_blank'><img src="../../public/twitter.png" alt="Twitter logo" /></a>
             </div>
         </div>
         <div className='footer-menu'>

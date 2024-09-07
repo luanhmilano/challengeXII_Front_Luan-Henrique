@@ -31,7 +31,6 @@ const LocationForm: React.FC = () => {
         } else {
             const fetchIPInfo = async () => {
                 try {
-                    // APIKEY = at_LZoAcsn5XT4jigA1Jo2qile871aqk
                     const response = await axios.get(`${import.meta.env.VITE_IP_API}=${import.meta.env.VITE_APIKEY}`);
                     setIpInfo(response.data);
                     localStorage.setItem('ipInfo', JSON.stringify(response.data));

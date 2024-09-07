@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import { card } from './cards'
 import './styles/card.css'
 
 interface Car {
   title: string
-  description: string
   image: string  
+  description: string
 }
 
 interface Props {
@@ -18,12 +18,7 @@ const Card: React.FC<Props> = ( { idProp } ) => {
 
   useEffect(() => {
         const fetchCarInfo = async () => {
-            try {
-                const response = await axios.get(`${import.meta.env.VITE_HOST}/cars/${idProp}`);
-                setCarInfo(response.data);
-            } catch (error) {
-                console.error('Erro ao buscar informações no Banco: ', error)
-            }
+            setCarInfo(card[idProp]);
         }
         fetchCarInfo()
 }, [idProp])
